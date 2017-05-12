@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="694.0" style="-fx-border-color: BLACK; -fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hw03.view.DesignController">
+   <top>
+      <HBox prefHeight="174.0" prefWidth="692.0" style="-fx-border-style: hidden hidden solid hidden; -fx-border-color: BLACK; -fx-border-width: 0.5px;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tabPane" opacity="0.85" prefHeight="172.0" prefWidth="463.0" style="-fx-border-width: 0.5PX;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="20.0" tabMaxWidth="50.0" tabMinWidth="50.0">
+              <tabs>
+                <Tab fx:id="fileTab" text="File">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="339.0" text="Generate ANN from exist configuration file (full path):">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="fileNameBox" prefHeight="27.0" prefWidth="176.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="6.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="fileUploadBtn" defaultButton="true" mnemonicParsing="false" onAction="#fileUploadBtn" opacity="0.85" text="UPLOAD">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content></Tab>
+                <Tab fx:id="configTab" text="Config">
+                     <content>
+                        <FlowPane prefHeight="129.0" prefWidth="415.0">
+                           <children>
+                              <VBox prefHeight="131.0" prefWidth="395.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="395.0">
+                                       <children>
+                                          <Label text="# Inputs:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="numIN" prefHeight="27.0" prefWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label text="# Outputs:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="numOUT" prefHeight="27.0" prefWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label text="# Neurons:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="numNeurons" prefHeight="27.0" prefWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="402.0">
+                                       <children>
+                                          <Label text="Max SSE:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="maxSSE" prefWidth="70.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label text="Max Epochs:">
+                                             <HBox.margin>
+                                                <Insets left="86.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="maxEpoch" prefWidth="70.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="46.0" prefWidth="402.0">
+                                       <children>
+                                          <Label text="Activation Function:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="253.0">
+                                             <children>
+                                                <RadioButton fx:id="actFuncRadio1" mnemonicParsing="false" selected="true" text="Sigmoidal">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="actFuncGroup" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <HBox alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="177.0">
+                                                   <children>
+                                                      <RadioButton fx:id="actFuncRadio2" mnemonicParsing="false" text="Soft Sign" toggleGroup="$actFuncGroup" />
+                                                      <Button fx:id="applyConfigBtn" mnemonicParsing="false" onAction="#applyConfigBtn" text="Config">
+                                                         <HBox.margin>
+                                                            <Insets left="100.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets top="3.0" />
+                                 </FlowPane.margin>
+                              </VBox>
+                           </children>
+                        </FlowPane>
+                     </content></Tab>
+              </tabs>
+            </TabPane>
+            <VBox prefHeight="124.0" prefWidth="209.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="103.0" text="Learning rate:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="alpha" prefHeight="27.0" prefWidth="130.0" text="0.2">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="1.0" prefWidth="88.0" text="Momentum:">
+                     <VBox.margin>
+                        <Insets top="6.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="momentum" prefHeight="27.0" prefWidth="70.0" text="0.5">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="applyMomentumBtn" mnemonicParsing="false" onAction="#applyMomentumBtn" opacity="0.85" text="APPLY">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="124.0" prefWidth="191.0">
+               <children>
+                  <Button fx:id="learnBtn" defaultButton="true" mnemonicParsing="false" onAction="#learnBtn" opacity="0.85" prefHeight="27.0" prefWidth="90.0" text="LEARN!">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="classifyBtn" mnemonicParsing="false" onAction="#classifyBtn" opacity="0.85" prefWidth="90.0" text="CLASSIFY!">
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exitBtn" opacity="0.85" prefHeight="27.0" prefWidth="90.0" text="Exit">
+                     <VBox.margin>
+                        <Insets left="20.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="328.0" prefWidth="152.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Current SSE: ">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="currentSSE" text="0">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Current Epoch:">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="currentEpoch" text="0">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="stepBtn" mnemonicParsing="false" onAction="#stepBtn" prefWidth="62.0" text="Step">
+               <VBox.margin>
+                  <Insets left="10.0" top="100.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="pauseBtn" mnemonicParsing="false" onAction="#pauseBtn" text="Pause / Resume">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtn" text="Finish / Save">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Pane fx:id="canvasPane" prefHeight="334.0" prefWidth="521.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

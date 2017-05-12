@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/HiddenLayer.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/strategy/ActivationStrategy.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/Perceptron.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/data/LabeledInstances.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/view/DesignController.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/ANN.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/dataFileUtility.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/strategy/LinearActivationStrategy.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/data/UnlabeledInstance.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw02/SoftSignActivationFunctionTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/ANN.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/Layer.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/strategy/SoftplusActivationStrategy.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw02/PerceptronTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw02/OutputLayerTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/Edge.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/data/UnlabeledInstances.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw02/SigmoidalActivationFunctionTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/ANN_Client.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/SUB_ANN.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/ANNModel.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/ActivationFunction.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/OutputLayer.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw01/OutputLayerTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw02/StepActivationFunctionTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/model/Layer.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/test/hw01/PerceptronTest.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw02/inputOptionUtility.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/ANNMain.java</file>
+            <file>file:/Users/haoyuxiong/csci205_hw/src/hw03/view/design.fxml</file>
+        </group>
+    </open-files>
+</project-private>
